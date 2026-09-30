@@ -59,9 +59,7 @@ body.encerrado .over{display:block}
 body.encerrado .clock,body.encerrado .deadline{opacity:.35}
 
 /* vídeo */
-.video{margin:28px 0 6px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:9/16;max-height:78vh;margin-left:auto;margin-right:auto;max-width:440px}
-.video video{width:100%;height:100%;display:block;object-fit:cover;background:#000}
-.video.sem{display:none}
+.video{margin:28px 0 6px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#000}
 
 /* cupom */
 .cupom{margin:26px 0 0;display:flex;align-items:stretch;border:2px dashed var(--gold);border-radius:18px;overflow:hidden;background:rgba(242,182,50,.06)}
@@ -122,7 +120,8 @@ body.encerrado .btn::after{content:" · encerrado"}
   <div class="over"><h2>CUPOM ENCERRADO</h2><p>O AGORA15 valeu até 30/09 às 23h59. Fale com a nossa equipe no WhatsApp para saber a condição atual.</p></div>
 
   <div class="video" id="vwrap">
-    <video id="vid" src="video/agora15-pagina.mp4" controls playsinline preload="metadata"></video>
+    <vturb-smartplayer id="vid-6abd0bd9f8f55e9b9be7726f" style="display: block; margin: 0 auto; width: 100%; "><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+    <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/98f98845-02a5-4e75-a39a-bbafedfa3212/players/6abd0bd9f8f55e9b9be7726f/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
   </div>
 
   <div class="cupom">
@@ -188,9 +187,6 @@ b.addEventListener('click', function(){
   var ok = function(){ b.textContent='Copiado ✓'; b.classList.add('ok'); setTimeout(function(){b.textContent='Copiar'; b.classList.remove('ok')},2200); };
   if (navigator.clipboard) navigator.clipboard.writeText('AGORA15').then(ok, ok); else ok();
 });
-// sem vídeo publicado ainda → esconde o bloco
-var v = document.getElementById('vid');
-v.addEventListener('error', function(){ document.getElementById('vwrap').classList.add('sem'); });
 </script>
 </body>
 </html>
