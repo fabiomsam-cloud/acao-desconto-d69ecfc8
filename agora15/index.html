@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AGORA15 · 15% OFF só hoje</title>
+<meta name="description" content="Cupom AGORA15: 15% de desconto nas Mentorias Elite, no cartão ou no Pix à vista. Válido só até hoje, 30/09, às 23h59 (horário de Manaus).">
+<meta property="og:title" content="Cupom AGORA15 · 15% OFF só hoje">
+<meta property="og:description" content="15% de desconto nas Mentorias Elite, no cartão ou no Pix à vista. Até 23h59 de hoje (Manaus).">
+<meta name="theme-color" content="#0b0a08">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0a08; --bg2:#15130f; --card:#1b1813; --line:#2e2a22;
+  --gold:#f2b632; --gold2:#ffd76a; --red:#ff4b3e; --ink:#f6f1e7; --mut:#a79f8e; --ok:#3ddc84;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;line-height:1.45;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(120% 60% at 50% -10%,rgba(242,182,50,.18),transparent 60%),
+             radial-gradient(80% 50% at 100% 110%,rgba(255,75,62,.10),transparent 60%);}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 16px 56px}
+
+.strip{position:sticky;top:0;z-index:5;background:var(--red);color:#fff;text-align:center;
+  font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:9px 12px}
+.strip b{font-family:"Big Shoulders Display";font-size:16px;letter-spacing:.04em}
+
+.hero{text-align:center;padding:30px 0 8px}
+.kicker{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 14px;
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2)}
+.code{font-family:"Big Shoulders Display";font-weight:900;font-size:clamp(64px,19vw,132px);line-height:.9;
+  letter-spacing:.02em;margin:14px 0 6px;
+  background:linear-gradient(180deg,var(--gold2),var(--gold) 55%,#b9821a);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 28px rgba(242,182,50,.25))}
+.sub{font-size:clamp(18px,4.6vw,24px);font-weight:800}
+.sub em{font-style:normal;color:var(--gold2)}
+.sub2{color:var(--mut);margin-top:6px;font-size:15px}
+
+/* relógio */
+.clock{margin:26px 0 8px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cell{background:linear-gradient(180deg,#221e17,#14120e);border:1px solid var(--line);border-radius:18px;
+  padding:14px 4px 10px;text-align:center;position:relative;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.cell::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.55)}
+.num{font-family:"Big Shoulders Display";font-weight:900;font-size:clamp(68px,22vw,150px);line-height:.85;
+  font-variant-numeric:tabular-nums;color:var(--ink)}
+.lab{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-top:8px}
+.clock.urgent .num{color:var(--red);animation:pulse 1s steps(2) infinite}
+@keyframes pulse{50%{opacity:.72}}
+.deadline{text-align:center;color:var(--mut);font-size:14px}
+.deadline b{color:var(--ink)}
+.over{display:none;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:22px}
+.over h2{font-family:"Big Shoulders Display";font-size:40px;color:var(--red)}
+body.encerrado .over{display:block}
+body.encerrado .clock,body.encerrado .deadline{opacity:.35}
+
+/* vídeo */
+.video{margin:28px 0 6px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:9/16;max-height:78vh;margin-left:auto;margin-right:auto;max-width:440px}
+.video video{width:100%;height:100%;display:block;object-fit:cover;background:#000}
+.video.sem{display:none}
+
+/* cupom */
+.cupom{margin:26px 0 0;display:flex;align-items:stretch;border:2px dashed var(--gold);border-radius:18px;overflow:hidden;background:rgba(242,182,50,.06)}
+.cupom .c{flex:1;padding:14px 16px}
+.cupom small{display:block;color:var(--mut);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.cupom strong{font-family:"Big Shoulders Display";font-size:40px;letter-spacing:.06em;color:var(--gold2)}
+.cupom button{border:0;background:var(--gold);color:#1a1307;font-weight:800;font-size:15px;padding:0 20px;cursor:pointer;font-family:inherit}
+.cupom button.ok{background:var(--ok)}
+
+.passos{margin:18px 0 0;display:grid;gap:8px;counter-reset:p}
+.passos li{list-style:none;counter-increment:p;display:flex;gap:12px;align-items:flex-start;color:var(--ink);font-size:15px}
+.passos li::before{content:counter(p);flex:0 0 28px;height:28px;border-radius:50%;background:var(--card);border:1px solid var(--line);
+  display:grid;place-items:center;font-weight:800;color:var(--gold2);font-size:14px}
+.regra{margin-top:12px;font-size:13px;color:var(--mut)}
+
+/* cartões */
+h3.sec{font-family:"Big Shoulders Display";font-weight:900;font-size:34px;letter-spacing:.02em;margin:40px 0 4px}
+.secsub{color:var(--mut);font-size:14px;margin-bottom:16px}
+.grid{display:grid;gap:12px}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:linear-gradient(180deg,var(--card),#15130f);border:1px solid var(--line);border-radius:18px;padding:18px 16px 16px;
+  display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(14px);animation:up .5s ease forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.card .nome{font-weight:800;font-size:18px;line-height:1.2}
+.card .acc{font-size:12px;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+.card .de{font-size:13px;color:var(--mut);text-decoration:line-through}
+.card .por{font-size:15px}
+.card .por b{font-family:"Big Shoulders Display";font-size:30px;color:var(--gold2);letter-spacing:.02em}
+.card .pix{font-size:14px;color:var(--ink)}
+.card .pix b{color:var(--ok)}
+.btn{margin-top:auto;display:block;text-align:center;text-decoration:none;background:var(--gold);color:#1a1307;font-weight:800;
+  border-radius:12px;padding:14px 12px;font-size:16px;transition:transform .15s ease,background .15s}
+.btn:active{transform:scale(.98)}
+.btn:hover{background:var(--gold2)}
+body.encerrado .btn{pointer-events:none;background:#3a352b;color:#7d7566}
+body.encerrado .btn::after{content:" · encerrado"}
+
+.foot{margin-top:36px;text-align:center;color:var(--mut);font-size:12px}
+.foot p+p{margin-top:6px}
+</style>
+</head>
+<body>
+<div class="strip">⏰ Só hoje · <b>30/09</b> · até 23h59 de Manaus</div>
+<main>
+  <section class="hero">
+    <span class="kicker">Cupom de último dia do mês</span>
+    <div class="code">AGORA15</div>
+    <p class="sub"><em>15% de desconto</em> na sua Mentoria Elite</p>
+    <p class="sub2">No cartão ou no Pix à vista. Depois das 23h59, volta ao valor normal.</p>
+  </section>
+
+  <div class="clock" id="clock" aria-live="polite">
+    <div class="cell"><div class="num" id="hh">--</div><div class="lab">horas</div></div>
+    <div class="cell"><div class="num" id="mm">--</div><div class="lab">minutos</div></div>
+    <div class="cell"><div class="num" id="ss">--</div><div class="lab">segundos</div></div>
+  </div>
+  <p class="deadline">O cupom expira <b>hoje, 30/09, às 23h59</b> (horário de Manaus)</p>
+  <div class="over"><h2>CUPOM ENCERRADO</h2><p>O AGORA15 valeu até 30/09 às 23h59. Fale com a nossa equipe no WhatsApp para saber a condição atual.</p></div>
+
+  <div class="video" id="vwrap">
+    <video id="vid" src="video/agora15-pagina.mp4" controls playsinline preload="metadata"></video>
+  </div>
+
+  <div class="cupom">
+    <div class="c"><small>Seu cupom</small><strong>AGORA15</strong></div>
+    <button id="copiar" type="button">Copiar</button>
+  </div>
+  <ol class="passos">
+    <li>Toque em <b>&nbsp;Garantir com 15% OFF&nbsp;</b> na sua mentoria, aqui embaixo.</li>
+    <li>No pagamento, toque em <b>&nbsp;Adicionar cupom&nbsp;</b> e digite <b>&nbsp;AGORA15</b>.</li>
+    <li>Escolha <b>&nbsp;cartão&nbsp;</b> (até 12x) ou <b>&nbsp;Pix à vista</b> e finalize.</li>
+  </ol>
+  <p class="regra">O cupom vale para pagamento no cartão (inclusive em até 12x ou em dois cartões) e no Pix à vista. Não vale para Pix ou boleto parcelado.</p>
+
+  <h3 class="sec">Escolha a sua mentoria</h3>
+  <p class="secsub">Valores já com os 15% do AGORA15.</p>
+  <div class="grid" id="grid"></div>
+
+  <div class="foot">
+    <p>Sou Concurseiro e Vou Passar · Professor Fábio Silva</p>
+    <p>Pagamento processado pela Hubla em ambiente seguro. Garantia de 7 dias.</p>
+  </div>
+</main>
+<script>
+// fim: 30/09/2026 23:59:59 em Manaus (UTC-4)
+var FIM = Date.parse('2026-09-30T23:59:59-04:00');
+var UTM = 'utm_source=whatsapp-anne-vendedora&utm_medium=disparo&utm_campaign=agora15-3009&utm_content=pagina';
+var M = [
+  {n:'Elite TJ-AM', a:'2 anos de acesso', id:'CESytiuhkKtJNzB6GkxX', de12:'159,77', de:'1.597,00', por12:'135,80', pix:'1.357,45'},
+  {n:'Elite SEDUC-AM', a:'12 meses de acesso', id:'yIZqltnfaRZK0BbL5Gpw', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
+  {n:'Elite ManausPrev', a:'12 meses de acesso', id:'0fvsIT0tIXS6qAvWvWmZ', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
+  {n:'Elite SEMSA Manaus', a:'12 meses de acesso', id:'ZH5Hr3cQ8wNX4MJFlGIf', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
+  {n:'Elite SEDUC-PA', a:'', id:'jnycvHCi4igv1ZxhCGu9', de12:'39,72', de:'397,00', por12:'33,76', pix:'337,45'},
+  {n:'Elite PRF', a:'1 ano de acesso', id:'9cXSKMM7tAERGGYmxngp', de12:'159,77', de:'1.597,00', por12:'135,80', pix:'1.357,45'},
+  {n:'Elite Policial', a:'', id:'srtyXw9Ppl1cISBz0SiW', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
+  {n:'Elite PRF Administrativo', a:'', id:'nGDVVj9hi5zqL3OTYrTU', de12:'119,76', de:'1.197,00', por12:'101,80', pix:'1.017,45'},
+  {n:'Elite INSS', a:'', id:'TqE56ydyAqNzNw3DH94f', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
+  {n:'Elite SES-AM', a:'', id:'ziJASBBhBcQGyQXutQrI', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'}
+];
+var g = document.getElementById('grid');
+M.forEach(function(m,i){
+  var el = document.createElement('article'); el.className='card'; el.style.animationDelay=(0.05*i)+'s';
+  el.innerHTML = '<div><div class="nome">'+m.n+'</div>'+(m.a?'<div class="acc">'+m.a+'</div>':'')+'</div>'+
+    '<div><div class="de">de 12x R$ '+m.de12+' · R$ '+m.de+' à vista</div>'+
+    '<div class="por">por <b>12x R$ '+m.por12+'</b> no cartão</div>'+
+    '<div class="pix">ou <b>R$ '+m.pix+'</b> no Pix à vista</div></div>'+
+    '<a class="btn" href="https://pay.hub.la/'+m.id+'?'+UTM+'">Garantir com 15% OFF</a>';
+  g.appendChild(el);
+});
+function pad(n){return (n<10?'0':'')+n}
+function tick(){
+  var r = FIM - Date.now();
+  if (r <= 0){ document.body.classList.add('encerrado'); ['hh','mm','ss'].forEach(function(k){document.getElementById(k).textContent='00'}); return; }
+  var s = Math.floor(r/1000), h = Math.floor(s/3600), m = Math.floor((s%3600)/60), x = s%60;
+  document.getElementById('hh').textContent = pad(h);
+  document.getElementById('mm').textContent = pad(m);
+  document.getElementById('ss').textContent = pad(x);
+  document.getElementById('clock').classList.toggle('urgent', r < 3*3600*1000);
+  setTimeout(tick, 1000 - (Date.now() % 1000));
+}
+tick();
+var b = document.getElementById('copiar');
+b.addEventListener('click', function(){
+  var ok = function(){ b.textContent='Copiado ✓'; b.classList.add('ok'); setTimeout(function(){b.textContent='Copiar'; b.classList.remove('ok')},2200); };
+  if (navigator.clipboard) navigator.clipboard.writeText('AGORA15').then(ok, ok); else ok();
+});
+// sem vídeo publicado ainda → esconde o bloco
+var v = document.getElementById('vid');
+v.addEventListener('error', function(){ document.getElementById('vwrap').classList.add('sem'); });
+</script>
+</body>
+</html>
