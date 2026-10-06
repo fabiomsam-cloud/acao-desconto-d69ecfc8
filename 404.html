@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abrindo sua condição…</title>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0b0a08;color:#f6f1e7;font-family:system-ui,sans-serif}</style>
+<script>
+// 06/10: o botão do template da Meta grava a URL como ".../agora15/{{1}}" (a Meta remove o "?").
+// O link chega como ".../agora15/t=<conversa>&m=<frente>" (ou com o "?" codificado) → caminho inexistente.
+// Este 404 transforma o resto do caminho de volta em query string e abre a página da ação.
+(function () {
+  var m = location.pathname.match(/^(\/acao-desconto-d69ecfc8\/[^\/]+\/)(.+)$/);
+  if (m) {
+    var resto = m[2];
+    try { resto = decodeURIComponent(resto); } catch (e) {}
+    resto = resto.replace(/^\?+/, '');
+    var extra = location.search.replace(/^\?/, '');
+    location.replace(m[1] + '?' + resto + (extra ? '&' + extra : ''));
+  } else {
+    location.replace('/acao-desconto-d69ecfc8/agora15/');
+  }
+})();
+</script>
+</head>
+<body><p>Abrindo sua condição…</p></body>
+</html>
