@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AGORA15 · 15% OFF só hoje</title>
-<meta name="description" content="Cupom AGORA15: 15% de desconto nas Mentorias Elite, no cartão ou no Pix à vista. Válido só até hoje, 30/09, às 23h59 (horário de Manaus).">
+<meta name="description" content="Cupom AGORA15: 15% de desconto nas Mentorias Elite, no cartão ou no Pix à vista. Válido só até hoje, às 23h59 (horário de Manaus).">
 <meta property="og:title" content="Cupom AGORA15 · 15% OFF só hoje">
 <meta property="og:description" content="15% de desconto nas Mentorias Elite, no cartão ou no Pix à vista. Até 23h59 de hoje (Manaus).">
 <meta name="theme-color" content="#0b0a08">
@@ -94,6 +94,8 @@ h3.sec{font-family:"Big Shoulders Display";font-weight:900;font-size:34px;letter
   border-radius:12px;padding:14px 12px;font-size:16px;transition:transform .15s ease,background .15s}
 .btn:active{transform:scale(.98)}
 .btn:hover{background:var(--gold2)}
+.semcartao{display:block;text-align:center;font-size:14px;color:var(--mut);text-decoration:none;padding:4px 0 0}
+.semcartao b{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 body.encerrado .btn{pointer-events:none;background:#3a352b;color:#7d7566}
 body.encerrado .btn::after{content:" · encerrado"}
 
@@ -102,12 +104,12 @@ body.encerrado .btn::after{content:" · encerrado"}
 </style>
 </head>
 <body>
-<div class="strip">⏰ Só hoje · <b>30/09</b> · até 23h59 de Manaus</div>
+<div class="strip">⏰ Só hoje · <b class="hoje">--/--</b> · até 23h59 de Manaus</div>
 <main>
   <section class="hero">
-    <span class="kicker">Cupom de último dia do mês</span>
+    <span class="kicker">Condição especial de hoje</span>
     <div class="code">AGORA15</div>
-    <p class="sub"><em>15% de desconto</em> na sua Mentoria Elite</p>
+    <p class="sub"><em>15% de desconto</em> na <span id="alvo">sua Mentoria Elite</span></p>
     <p class="sub2">No cartão ou no Pix à vista. Depois das 23h59, volta ao valor normal.</p>
   </section>
 
@@ -116,12 +118,13 @@ body.encerrado .btn::after{content:" · encerrado"}
     <div class="cell"><div class="num" id="mm">--</div><div class="lab">minutos</div></div>
     <div class="cell"><div class="num" id="ss">--</div><div class="lab">segundos</div></div>
   </div>
-  <p class="deadline">O cupom expira <b>hoje, 30/09, às 23h59</b> (horário de Manaus)</p>
-  <div class="over"><h2>CUPOM ENCERRADO</h2><p>O AGORA15 valeu até 30/09 às 23h59. Fale com a nossa equipe no WhatsApp para saber a condição atual.</p></div>
+  <p class="deadline">O cupom expira <b>hoje, <span class="hoje">--/--</span>, às 23h59</b> (horário de Manaus)</p>
+  <div class="over"><h2>CUPOM ENCERRADO</h2><p>O AGORA15 de hoje encerrou às 23h59. Fale com a nossa equipe no WhatsApp para saber a condição atual.</p></div>
 
+  <!-- TOPO: VSL genérico da ação (06/10) -->
   <div class="video" id="vwrap">
-    <vturb-smartplayer id="vid-6abd0bd9f8f55e9b9be7726f" style="display: block; margin: 0 auto; width: 100%; "><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
-    <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/98f98845-02a5-4e75-a39a-bbafedfa3212/players/6abd0bd9f8f55e9b9be7726f/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+    <vturb-smartplayer id="vid-6ac5090a9b3535475218d73e" style="display: block; margin: 0 auto; width: 100%; "><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+    <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/98f98845-02a5-4e75-a39a-bbafedfa3212/players/6ac5090a9b3535475218d73e/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
   </div>
 
   <div class="cupom">
@@ -129,13 +132,13 @@ body.encerrado .btn::after{content:" · encerrado"}
     <button id="copiar" type="button">Copiar</button>
   </div>
   <ol class="passos">
-    <li><span>Toque em <b>Garantir com 15% OFF</b> na sua mentoria, aqui embaixo.</span></li>
+    <li><span>Toque em <b>Garantir com 15% OFF</b>, aqui embaixo.</span></li>
     <li><span>O cupom <b>AGORA15</b> já entra aplicado no pagamento. Confira o desconto antes de pagar (se não aparecer, toque em <b>Adicionar cupom</b> e digite AGORA15).</span></li>
     <li><span>Escolha <b>cartão</b> (até 12x) ou <b>Pix à vista</b> e finalize.</span></li>
   </ol>
   <p class="regra">O cupom vale para pagamento no cartão (inclusive em até 12x ou em dois cartões) e no Pix à vista. Não vale para Pix ou boleto parcelado.</p>
 
-  <h3 class="sec">Escolha a sua mentoria</h3>
+  <h3 class="sec" id="sec">Escolha a sua mentoria</h3>
   <p class="secsub">Valores já com os 15% do AGORA15.</p>
   <div class="grid" id="grid"></div>
 
@@ -145,32 +148,75 @@ body.encerrado .btn::after{content:" · encerrado"}
   </div>
 </main>
 <script>
-// fim: 30/09/2026 23:59:59 em Manaus (UTC-4)
-var FIM = Date.parse('2026-09-30T23:59:59-04:00');
-var UTM = 'coupon=AGORA15&utm_source=whatsapp-anne-vendedora&utm_medium=disparo&utm_campaign=agora15-3009&utm_content=pagina';
-var M = [
-  {n:'Elite TJ-AM', a:'2 anos de acesso', id:'CESytiuhkKtJNzB6GkxX', de12:'159,77', de:'1.597,00', por12:'135,81', pix:'1.357,45'},
-  {n:'Elite SEDUC-AM', a:'12 meses de acesso', id:'yIZqltnfaRZK0BbL5Gpw', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
-  {n:'Elite ManausPrev', a:'12 meses de acesso', id:'0fvsIT0tIXS6qAvWvWmZ', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
-  {n:'Elite SEMSA Manaus', a:'12 meses de acesso', id:'ZH5Hr3cQ8wNX4MJFlGIf', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
-  {n:'Elite SEDUC-PA', a:'', id:'jnycvHCi4igv1ZxhCGu9', de12:'39,72', de:'397,00', por12:'33,76', pix:'337,45'},
-  {n:'Elite PRF', a:'1 ano de acesso', id:'9cXSKMM7tAERGGYmxngp', de12:'159,77', de:'1.597,00', por12:'135,81', pix:'1.357,45'},
-  {n:'Elite Policial', a:'', id:'srtyXw9Ppl1cISBz0SiW', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
-  {n:'Elite PRF Administrativo', a:'', id:'nGDVVj9hi5zqL3OTYrTU', de12:'119,76', de:'1.197,00', por12:'101,79', pix:'1.017,45'},
-  {n:'Elite INSS', a:'', id:'TqE56ydyAqNzNw3DH94f', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
-  {n:'Elite SES-AM', a:'', id:'ziJASBBhBcQGyQXutQrI', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'}
-];
-var g = document.getElementById('grid');
-M.forEach(function(m,i){
-  var el = document.createElement('article'); el.className='card'; el.style.animationDelay=(0.05*i)+'s';
-  el.innerHTML = '<div><div class="nome">'+m.n+'</div>'+(m.a?'<div class="acc">'+m.a+'</div>':'')+'</div>'+
-    '<div><div class="de">de 12x R$ '+m.de12+' · R$ '+m.de+' à vista</div>'+
-    '<div class="por">por <b>12x R$ '+m.por12+'</b> no cartão</div>'+
-    '<div class="pix">ou <b>R$ '+m.pix+'</b> no Pix à vista</div></div>'+
-    '<a class="btn" href="https://pay.hub.la/'+m.id+'?'+UTM+'">Garantir com 15% OFF</a>';
-  g.appendChild(el);
-});
+// PRAZO MÓVEL: o cupom vence sempre às 23h59:59 do dia de HOJE em Manaus (UTC-4, sem horário de verão).
+var OFF = -4 * 3600 * 1000;
+var m0 = new Date(Date.now() + OFF); m0.setUTCHours(23, 59, 59, 999);
+var FIM = m0.getTime() - OFF;
 function pad(n){return (n<10?'0':'')+n}
+var HOJE = pad(m0.getUTCDate()) + '/' + pad(m0.getUTCMonth() + 1);
+document.querySelectorAll('.hoje').forEach(function(e){ e.textContent = HOJE; });
+
+var UTM = 'coupon=AGORA15&utm_source=whatsapp-anne-vendedora&utm_medium=disparo&utm_campaign=agora15-movel&utm_content=pagina';
+// chave = fn_frente() do banco da Anne
+var M = [
+  {k:'tjam',       n:'Elite TJ-AM', a:'2 anos de acesso', id:'CESytiuhkKtJNzB6GkxX', de12:'159,77', de:'1.597,00', por12:'135,81', pix:'1.357,45'},
+  {k:'seducam',    n:'Elite SEDUC-AM', a:'12 meses de acesso', id:'yIZqltnfaRZK0BbL5Gpw', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
+  {k:'policiasam', n:'Elite Polícias do Amazonas', a:'2 anos de acesso', id:'mXJHIR5ul84JR3qNti9D', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
+  {k:'prf',        n:'Elite PRF', a:'1 ano de acesso', id:'9cXSKMM7tAERGGYmxngp', de12:'159,77', de:'1.597,00', por12:'135,81', pix:'1.357,45'},
+  {k:'prfadm',     n:'Elite PRF Administrativo', a:'', id:'nGDVVj9hi5zqL3OTYrTU', de12:'119,76', de:'1.197,00', por12:'101,79', pix:'1.017,45'},
+  {k:'manausprev', n:'Elite ManausPrev', a:'12 meses de acesso', id:'0fvsIT0tIXS6qAvWvWmZ', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
+  {k:'semsa',      n:'Elite SEMSA Manaus', a:'12 meses de acesso', id:'ZH5Hr3cQ8wNX4MJFlGIf', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
+  {k:'seducpa',    n:'Elite SEDUC-PA', a:'', id:'jnycvHCi4igv1ZxhCGu9', de12:'39,72', de:'397,00', por12:'33,76', pix:'337,45'},
+  {k:'inss',       n:'Elite INSS', a:'', id:'TqE56ydyAqNzNw3DH94f', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'},
+  {k:'sesam',      n:'Elite SES-AM', a:'', id:'ziJASBBhBcQGyQXutQrI', de12:'99,75', de:'997,00', por12:'84,79', pix:'847,45'}
+];
+// "Não tem cartão?" → WhatsApp da Anne (+55 92 3199-9420) com mensagem pronta. Quem veio pelo disparo
+// já foi transferido ao especialista ao abrir a página, então quem responde é o agente da frente dele;
+// a mensagem do lead também abre a janela de 24h.
+function zap(m){
+  return 'https://wa.me/559231999420?text=' + encodeURIComponent(
+    'Oi, Anne! Vi a condição da ' + m.n + ', mas não tenho cartão de crédito. Como consigo fazer minha matrícula?');
+}
+var g = document.getElementById('grid');
+function render(lista){
+  g.innerHTML = '';
+  if (lista.length === 1){
+    g.style.gridTemplateColumns = '1fr';
+    document.getElementById('sec').textContent = 'Sua mentoria';
+    document.getElementById('alvo').textContent = lista[0].n;
+  }
+  lista.forEach(function(m,i){
+    var el = document.createElement('article'); el.className='card'; el.style.animationDelay=(0.05*i)+'s';
+    el.innerHTML = '<div><div class="nome">'+m.n+'</div>'+(m.a?'<div class="acc">'+m.a+'</div>':'')+'</div>'+
+      '<div><div class="de">de 12x R$ '+m.de12+' · R$ '+m.de+' à vista</div>'+
+      '<div class="por">por <b>12x R$ '+m.por12+'</b> no cartão</div>'+
+      '<div class="pix">ou <b>R$ '+m.pix+'</b> no Pix à vista</div></div>'+
+      '<a class="btn" href="https://pay.hub.la/'+m.id+'?'+UTM+'">Garantir com 15% OFF</a>'+
+      '<a class="semcartao" href="'+zap(m)+'">Não tem cartão? <b>Clique aqui</b></a>';
+    g.appendChild(el);
+  });
+}
+function mostrar(chave){
+  var uma = M.filter(function(m){ return m.k === chave; });
+  render(uma.length ? uma : M);
+}
+
+// Lead identificado: ?t=<token do disparo/da Anne>. A abertura da página registra o clique
+// e devolve a frente do lead (o banco transfere o lead para o agente especialista).
+var SB = 'https://blwbbdcwdcwitsnskplk.supabase.co', SBK = 'sb_publishable_kfJ3pGohrm4tr_gn5KffCQ_flMg1aYr';
+var qs = new URLSearchParams(location.search), TK = qs.get('t'), MK = qs.get('m');
+if (TK){
+  var feito = false, rede = setTimeout(function(){ if(!feito){ feito = true; mostrar(MK); } }, 3500);
+  fetch(SB + '/rest/v1/rpc/fn_acao_pagina', {method:'POST', keepalive:true,
+    headers:{'apikey':SBK, 'Authorization':'Bearer '+SBK, 'Content-Type':'application/json'},
+    body: JSON.stringify({p_token: TK})})
+  .then(function(r){ return r.json(); })
+  .then(function(j){ if(!feito){ feito = true; clearTimeout(rede); mostrar((j && j.frente) || MK); } })
+  .catch(function(){ if(!feito){ feito = true; clearTimeout(rede); mostrar(MK); } });
+} else {
+  mostrar(MK);
+}
+
 function tick(){
   var r = FIM - Date.now();
   if (r <= 0){ document.body.classList.add('encerrado'); ['hh','mm','ss'].forEach(function(k){document.getElementById(k).textContent='00'}); return; }
