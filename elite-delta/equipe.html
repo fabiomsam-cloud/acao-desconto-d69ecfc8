@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elite Delta · Inscrições</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0a08;--card:#16130f;--card2:#1d1913;--line:#2e2a22;--gold:#f2b632;--ink:#f6f1e7;--mut:#a79f8e;--ok:#3ddc84;--blue:#5aa9ff;--red:#ff6b5e;--purple:#b08cff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:15px;line-height:1.45}
+header{position:sticky;top:0;z-index:5;background:rgba(11,10,8,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.top{max-width:1180px;margin:0 auto;padding:12px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+h1{font-family:"Big Shoulders Display",sans-serif;font-size:28px;margin:0;letter-spacing:.02em}
+h1 span{color:var(--gold)}
+.vivo{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--mut)}
+.vivo i{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:p 2s infinite}
+.vivo.off i{background:var(--red);animation:none}
+@keyframes p{70%{box-shadow:0 0 0 8px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
+.sp{flex:1}
+.kpis{display:flex;gap:8px;flex-wrap:wrap}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:13px;color:var(--mut);cursor:pointer}
+.kpi b{color:var(--ink);font-size:16px;margin-right:4px}
+.kpi.on{border-color:var(--gold)}
+.bar{max-width:1180px;margin:0 auto;padding:0 16px 12px;display:flex;gap:8px;flex-wrap:wrap}
+input,select,textarea{background:var(--card2);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:8px 10px;font:inherit;font-size:14px}
+button{font:inherit;cursor:pointer}
+.btn{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:8px 12px;font-size:14px}
+.btn.gold{border-color:var(--gold);color:var(--gold)}
+main{max-width:1180px;margin:0 auto;padding:14px 16px 60px;display:grid;gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-columns:1.1fr 1.6fr 1fr;gap:14px}
+.card.novo{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.card.flash{animation:fl 2.5s ease}
+@keyframes fl{0%{background:#3a2c0c}100%{background:var(--card)}}
+@media (max-width:900px){.card{grid-template-columns:1fr}}
+.nome{font-weight:800;font-size:17px}
+.mut{color:var(--mut);font-size:13px}
+.tag{display:inline-block;font-size:12px;border-radius:999px;padding:2px 8px;border:1px solid var(--line);margin:4px 4px 0 0;color:var(--mut)}
+.tag.g{border-color:var(--gold);color:var(--gold)}
+.wa{display:inline-flex;align-items:center;gap:6px;margin-top:10px;background:#1f3a2a;border:1px solid #2f6b47;color:#9ff0c3;text-decoration:none;border-radius:9px;padding:8px 12px;font-weight:700;font-size:14px}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:14px}
+dt{color:var(--mut)}
+dd{margin:0}
+.porque{grid-column:1/-1;background:var(--card2);border-radius:9px;padding:8px 10px;margin-top:4px;white-space:pre-wrap}
+.acoes{display:grid;gap:8px;align-content:start}
+.acoes select,.acoes input,.acoes textarea{width:100%}
+.acoes textarea{min-height:58px;resize:vertical}
+.st-novo{color:var(--gold)} .st-em_contato{color:var(--blue)} .st-sem_resposta{color:var(--mut)} .st-matriculado{color:var(--ok)} .st-sem_perfil{color:var(--red)}
+.salvo{font-size:12px;color:var(--ok);min-height:16px}
+.vazio,.trava{max-width:560px;margin:60px auto;text-align:center;color:var(--mut)}
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <h1>Elite Delta · <span>Inscrições</span></h1>
+    <span class="vivo" id="vivo"><i></i><span id="vivoTxt">conectando…</span></span>
+    <span class="sp"></span>
+    <div class="kpis" id="kpis"></div>
+  </div>
+  <div class="bar">
+    <input id="busca" type="search" placeholder="Buscar nome, telefone, estado…" style="flex:1;min-width:200px">
+    <input id="eu" type="text" placeholder="Seu nome (responsável)" style="width:190px">
+    <button class="btn" id="som">🔔 Ativar som e aviso</button>
+    <button class="btn gold" id="csv">Baixar planilha (CSV)</button>
+  </div>
+</header>
+<main id="lista"><p class="vazio">Carregando…</p></main>
+
+<script>
+(function(){
+  var API = "https://dqpxugdhlgafvddavzzp.supabase.co/functions/v1/elite-delta";
+  var CHAVE = (location.hash.match(/k=([\w-]+)/) || [])[1] || "";
+  var lista = document.getElementById("lista");
+  if(!CHAVE){ lista.innerHTML = '<p class="trava">Link incompleto. Peça ao Fábio o link da equipe.</p>'; return; }
+  var ST = {novo:"Novo", em_contato:"Em contato", sem_resposta:"Sem resposta", matriculado:"Matriculado", sem_perfil:"Sem perfil"};
+  var itens = [], vistos = null, filtro = "todos", somOn = false, editando = {};
+  var store = {get:function(k){try{return localStorage.getItem(k)}catch(e){return null}}, set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+  var eu = document.getElementById("eu"); eu.value = store.get("ed_eu") || ""; eu.addEventListener("change", function(){ store.set("ed_eu", eu.value.trim()); });
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+  function hora(iso){ var d = new Date(iso); return d.toLocaleString("pt-BR", {timeZone:"America/Manaus", day:"2-digit", month:"2-digit", hour:"2-digit", minute:"2-digit"}) + " (Manaus)"; }
+  function desde(iso){ var m = Math.round((Date.now() - new Date(iso)) / 60000); if(m < 1) return "agora"; if(m < 60) return "há " + m + " min"; var h = Math.floor(m/60); if(h < 24) return "há " + h + " h"; return "há " + Math.floor(h/24) + " d"; }
+  function fmtTel(w){ var d = String(w||"").replace(/^55/,""); return d.length === 11 ? "(" + d.slice(0,2) + ") " + d.slice(2,7) + "-" + d.slice(7) : d; }
+  var FORM = {formado:"Formado(a) em Direito", cursando:"Cursando Direito", nao:"Não é da área do Direito"};
+  function waLink(it){
+    var nome = (it.nome || "").split(" ")[0];
+    var quem = (eu.value || "").trim();
+    var txt = "Oi, " + nome + "! " + (quem ? "Aqui é " + quem + ", da" : "Aqui é da") + " equipe do Delegado Fábio Silva. Recebi sua inscrição na Mentoria Elite Delta e quero te explicar como ela funciona. Podemos conversar?";
+    return "https://wa.me/" + it.whatsapp + "?text=" + encodeURIComponent(txt);
+  }
+  function linha(dt, dd){ return dd ? "<dt>" + dt + "</dt><dd>" + esc(dd) + "</dd>" : ""; }
+  function card(it){
+    var form = FORM[it.formacao_direito] || it.formacao_direito || "—";
+    if(it.formacao_direito === "formado" && it.tempo_formado) form += " há " + it.tempo_formado;
+    if(it.formacao_direito === "cursando" && it.periodo_cursando) form += " (" + it.periodo_cursando + ")";
+    var tags = "";
+    if(it.formacao_direito === "formado") tags += '<span class="tag g">Direito ✓</span>';
+    if(it.oab === "sim") tags += '<span class="tag g">OAB</span>';
+    if(it.horas_dia) tags += '<span class="tag">' + esc(it.horas_dia) + '/dia</span>';
+    if(it.envios > 1) tags += '<span class="tag">enviou ' + it.envios + 'x</span>';
+    if(it.utm_source) tags += '<span class="tag">' + esc(it.utm_source) + (it.utm_campaign ? " · " + esc(it.utm_campaign) : "") + '</span>';
+    var opts = Object.keys(ST).map(function(k){ return '<option value="' + k + '"' + (k === it.status ? " selected" : "") + ">" + ST[k] + "</option>"; }).join("");
+    return '<article class="card' + (it.status === "novo" ? " novo" : "") + '" id="c' + it.id + '">' +
+      '<div><div class="nome">' + esc(it.nome) + '</div>' +
+        '<div class="mut">' + esc(fmtTel(it.whatsapp)) + (it.email ? " · " + esc(it.email) : "") + '</div>' +
+        '<div class="mut">' + esc([it.cidade, it.uf].filter(Boolean).join(" / ")) + '</div>' +
+        '<div class="mut">Inscreveu ' + desde(it.created_at) + ' · ' + hora(it.created_at) + '</div>' + tags +
+        '<div><a class="wa" target="_blank" rel="noopener" data-wa="' + it.id + '" href="' + waLink(it) + '">💬 Chamar no WhatsApp</a></div></div>' +
+      '<dl>' + linha("Formação", form) + linha("Profissão", it.profissao) + linha("Já estudou", it.ja_estudou_delegado) + linha("Provas", it.provas_feitas) +
+        linha("Estado-alvo", it.estado_alvo) + linha("Viajar", it.viajar_outros_estados) + linha("Mudar de estado", it.mudar_de_estado) +
+        linha("Dificuldade", it.maior_dificuldade) + linha("Melhor horário", it.melhor_horario) +
+        (it.por_que_delegado ? '<dd class="porque"><b>Por que Delegado:</b> ' + esc(it.por_que_delegado) + '</dd>' : "") + '</dl>' +
+      '<div class="acoes"><select data-st="' + it.id + '" class="st-' + it.status + '">' + opts + '</select>' +
+        '<input data-resp="' + it.id + '" placeholder="Responsável" value="' + esc(it.responsavel || "") + '">' +
+        '<textarea data-obs="' + it.id + '" placeholder="Observação">' + esc(it.observacao || "") + '</textarea>' +
+        '<div class="salvo" id="s' + it.id + '">' + (it.contato_em ? "Atualizado " + desde(it.contato_em) : "") + '</div></div></article>';
+  }
+  function kpis(){
+    var c = {todos: itens.length}; Object.keys(ST).forEach(function(k){ c[k] = 0; });
+    itens.forEach(function(it){ c[it.status] = (c[it.status] || 0) + 1; });
+    var hoje = new Date().toLocaleDateString("pt-BR", {timeZone:"America/Manaus"});
+    var h = itens.filter(function(it){ return new Date(it.created_at).toLocaleDateString("pt-BR", {timeZone:"America/Manaus"}) === hoje; }).length;
+    var html = '<span class="kpi' + (filtro === "todos" ? " on" : "") + '" data-f="todos"><b>' + c.todos + '</b>todas · ' + h + ' hoje</span>';
+    Object.keys(ST).forEach(function(k){ html += '<span class="kpi' + (filtro === k ? " on" : "") + '" data-f="' + k + '"><b class="st-' + k + '">' + c[k] + '</b>' + ST[k] + '</span>'; });
+    document.getElementById("kpis").innerHTML = html;
+  }
+  function render(novos){
+    kpis();
+    var q = document.getElementById("busca").value.trim().toLowerCase();
+    var vis = itens.filter(function(it){
+      if(filtro !== "todos" && it.status !== filtro) return false;
+      if(!q) return true;
+      return [it.nome, it.whatsapp, it.uf, it.cidade, it.estado_alvo, it.profissao, it.responsavel].join(" ").toLowerCase().indexOf(q) >= 0;
+    });
+    if(Object.keys(editando).length) return; // não redesenha enquanto alguém digita
+    lista.innerHTML = vis.length ? vis.map(card).join("") : '<p class="vazio">Nenhuma inscrição ' + (filtro === "todos" ? "ainda" : "neste filtro") + '.</p>';
+    (novos || []).forEach(function(id){ var el = document.getElementById("c" + id); if(el) el.classList.add("flash"); });
+  }
+  function bip(){
+    try{ var a = new (window.AudioContext || window.webkitAudioContext)(), o = a.createOscillator(), g = a.createGain();
+      o.connect(g); g.connect(a.destination); o.frequency.value = 880; g.gain.setValueAtTime(.25, a.currentTime); g.gain.exponentialRampToValueAtTime(.001, a.currentTime + .6); o.start(); o.stop(a.currentTime + .6); }catch(e){}
+  }
+  function api(body){ body.chave = CHAVE; return fetch(API, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(body)}).then(function(r){ return r.json().then(function(j){ if(!r.ok || !j.ok) throw new Error(j.error || r.status); return j; }); }); }
+  var naoLidos = 0;
+  function carregar(){
+    api({action:"listar"}).then(function(j){
+      document.getElementById("vivo").classList.remove("off");
+      document.getElementById("vivoTxt").textContent = "ao vivo · " + new Date().toLocaleTimeString("pt-BR", {timeZone:"America/Manaus", hour:"2-digit", minute:"2-digit", second:"2-digit"});
+      var novos = [];
+      if(vistos){ j.itens.forEach(function(it){ if(!vistos[it.id]) novos.push(it.id); }); }
+      vistos = {}; j.itens.forEach(function(it){ vistos[it.id] = 1; });
+      itens = j.itens; render(novos);
+      if(novos.length){
+        naoLidos += novos.length; document.title = "(" + naoLidos + ") Elite Delta · Inscrições";
+        if(somOn){ bip(); try{ var n = itens.filter(function(i){ return i.id === novos[0]; })[0]; new Notification("Nova inscrição Elite Delta", {body: (n ? n.nome + " · " + fmtTel(n.whatsapp) : "")}); }catch(e){} }
+      }
+    }).catch(function(e){
+      document.getElementById("vivo").classList.add("off");
+      document.getElementById("vivoTxt").textContent = String(e.message) === "chave" ? "link inválido" : "sem conexão, tentando de novo…";
+      if(String(e.message) === "chave") lista.innerHTML = '<p class="trava">Link inválido. Peça ao Fábio o link da equipe.</p>';
+    });
+  }
+  window.addEventListener("focus", function(){ naoLidos = 0; document.title = "Elite Delta · Inscrições"; });
+  document.getElementById("kpis").addEventListener("click", function(e){ var k = e.target.closest("[data-f]"); if(k){ filtro = k.dataset.f; editando = {}; render(); } });
+  document.getElementById("busca").addEventListener("input", function(){ render(); });
+  document.getElementById("som").addEventListener("click", function(){
+    somOn = true; bip(); this.textContent = "🔔 Som e aviso ligados";
+    try{ if(window.Notification && Notification.permission === "default") Notification.requestPermission(); }catch(e){}
+  });
+  function salvar(id, campos){
+    var s = document.getElementById("s" + id); if(s) s.textContent = "Salvando…";
+    api(Object.assign({action:"atualizar", id: id}, campos)).then(function(){
+      itens.forEach(function(it){ if(it.id === id){ Object.assign(it, campos); if(campos.status && campos.status !== "novo") it.contato_em = new Date().toISOString(); } });
+      var s2 = document.getElementById("s" + id); if(s2) s2.textContent = "Salvo ✓"; delete editando[id]; kpis();
+    }).catch(function(){ var s3 = document.getElementById("s" + id); if(s3) s3.textContent = "Não salvou — tente de novo"; });
+  }
+  lista.addEventListener("change", function(e){
+    var t = e.target, id;
+    if((id = t.getAttribute("data-st"))){
+      var campos = {status: t.value};
+      if(t.value !== "novo" && eu.value.trim()){ var r = document.querySelector('[data-resp="' + id + '"]'); if(r && !r.value.trim()){ r.value = eu.value.trim(); campos.responsavel = r.value; } }
+      t.className = "st-" + t.value; t.closest(".card").classList.toggle("novo", t.value === "novo"); salvar(Number(id), campos);
+    }
+    if((id = t.getAttribute("data-resp"))) salvar(Number(id), {responsavel: t.value});
+    if((id = t.getAttribute("data-obs"))) salvar(Number(id), {observacao: t.value});
+  });
+  lista.addEventListener("focusin", function(e){ var id = e.target.getAttribute("data-resp") || e.target.getAttribute("data-obs"); if(id) editando[id] = 1; });
+  lista.addEventListener("focusout", function(e){ var id = e.target.getAttribute("data-resp") || e.target.getAttribute("data-obs"); if(id) setTimeout(function(){ delete editando[id]; }, 400); });
+  lista.addEventListener("click", function(e){
+    var a = e.target.closest("[data-wa]"); if(!a) return;
+    var id = Number(a.getAttribute("data-wa")); a.href = waLink(itens.filter(function(i){ return i.id === id; })[0]);
+    var it = itens.filter(function(i){ return i.id === id; })[0];
+    if(it && it.status === "novo"){ var c = {status:"em_contato"}; if(eu.value.trim() && !it.responsavel) c.responsavel = eu.value.trim(); salvar(id, c); }
+  });
+  document.getElementById("csv").addEventListener("click", function(){
+    var cols = ["created_at","nome","whatsapp","email","cidade","uf","formacao_direito","tempo_formado","periodo_cursando","oab","profissao","ja_estudou_delegado","provas_feitas","por_que_delegado","horas_dia","maior_dificuldade","estado_alvo","viajar_outros_estados","mudar_de_estado","melhor_horario","status","responsavel","observacao","utm_source","utm_campaign"];
+    var q = function(v){ return '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"'; };
+    var csv = "﻿" + cols.join(";") + "\n" + itens.map(function(it){ return cols.map(function(c){ return q(c === "created_at" ? hora(it[c]) : it[c]); }).join(";"); }).join("\n");
+    var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
+    a.download = "elite-delta-inscricoes.csv"; a.click();
+  });
+  carregar(); setInterval(carregar, 10000);
+  setInterval(function(){ if(!Object.keys(editando).length) render(); }, 60000);
+})();
+</script>
+</body>
+</html>

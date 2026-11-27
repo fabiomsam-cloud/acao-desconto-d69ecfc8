@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mentoria Elite Delta · Inscrição</title>
+<meta name="description" content="Formulário de interesse na Mentoria Elite Delta do Delegado Fábio Silva, preparação para Delegado de Polícia.">
+<meta property="og:title" content="Mentoria Elite Delta · Inscrição">
+<meta property="og:description" content="Preencha e a equipe do Delegado Fábio Silva fala com você no WhatsApp.">
+<meta property="og:image" content="https://fabiomsam-cloud.github.io/acao-desconto-d69ecfc8/elite-delta/fabio.jpg">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0a08;--card:#16130f;--card2:#1d1913;--line:#2e2a22;--gold:#f2b632;--gold2:#ffd36b;--ink:#f6f1e7;--mut:#a79f8e;--err:#ff6b5e;--ok:#3ddc84}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:16px;line-height:1.5}
+a{color:var(--gold)}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 64px}
+header.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(120% 80% at 80% 0%,#2a2010 0%,var(--bg) 60%)}
+.hero .in{max-width:640px;margin:0 auto;padding:28px 16px 0;display:grid;grid-template-columns:1fr 150px;gap:12px;align-items:end}
+.kicker{display:inline-block;font-weight:800;font-size:12px;letter-spacing:.14em;color:var(--bg);background:var(--gold);padding:5px 10px;border-radius:999px}
+h1{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:46px;line-height:.95;margin:14px 0 10px;letter-spacing:.01em}
+h1 span{color:var(--gold)}
+.lead{color:var(--mut);margin:0 0 22px;font-size:16px}
+.hero img{width:150px;height:auto;display:block;border-radius:14px 14px 0 0;filter:saturate(.95)}
+@media (max-width:420px){.hero .in{grid-template-columns:1fr 112px}.hero img{width:112px}h1{font-size:40px}}
+.passos{display:flex;gap:8px;margin:22px 0 6px;flex-wrap:wrap}
+.passos div{flex:1 1 150px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px;color:var(--mut)}
+.passos b{color:var(--ink);display:block;font-size:14px}
+form{margin-top:18px}
+fieldset{border:1px solid var(--line);background:var(--card);border-radius:16px;margin:0 0 16px;padding:18px 16px 6px}
+legend{font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;padding:0 6px;color:var(--gold)}
+.q{margin:0 0 18px}
+.q>label,.q>.lbl{display:block;font-weight:600;margin-bottom:8px}
+.q small{display:block;color:var(--mut);font-weight:400;font-size:13px;margin-top:-4px;margin-bottom:8px}
+.req{color:var(--gold)}
+input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;background:var(--card2);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:12px;font:inherit;font-size:16px;outline:none}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+.ops{display:grid;gap:8px}
+.ops.duas{grid-template-columns:1fr 1fr}
+.op{position:relative}
+.op input{position:absolute;opacity:0;pointer-events:none}
+.op span{display:block;background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:11px 12px;cursor:pointer;font-size:15px;transition:border-color .15s,background .15s}
+.op input:checked+span{border-color:var(--gold);background:#2a210f;color:var(--gold2);font-weight:600}
+.op input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+.duas2{display:grid;grid-template-columns:1fr 110px;gap:10px}
+.hide{display:none}
+.erro{color:var(--err);font-size:13px;margin-top:6px;display:none}
+.q.invalida .erro{display:block}
+.q.invalida input,.q.invalida select,.q.invalida textarea,.q.invalida .op span{border-color:var(--err)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--mut);margin:4px 0 18px}
+.consent input{margin-top:3px;width:18px;height:18px;accent-color:var(--gold)}
+button.enviar{width:100%;border:0;border-radius:14px;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#1a1306;font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:24px;letter-spacing:.04em;padding:16px;cursor:pointer;box-shadow:0 8px 30px rgba(242,182,50,.25)}
+button.enviar:disabled{opacity:.6;cursor:wait}
+.msg-erro{color:var(--err);text-align:center;margin-top:12px;display:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.ok{display:none;text-align:center;padding:40px 8px}
+.ok .sel{font-size:54px}
+.ok h2{font-family:"Big Shoulders Display",sans-serif;font-size:40px;margin:8px 0;color:var(--gold)}
+.ok p{color:var(--mut);max-width:460px;margin:0 auto 18px}
+.ok a.btn{display:inline-block;background:var(--card);border:1px solid var(--gold);color:var(--gold);text-decoration:none;border-radius:12px;padding:12px 18px;font-weight:700}
+footer{color:var(--mut);font-size:12px;text-align:center;margin-top:28px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="in">
+    <div>
+      <span class="kicker">NOVA TURMA</span>
+      <h1>Mentoria<br><span>Elite Delta</span></h1>
+      <p class="lead">Preparação para <b>Delegado de Polícia</b> com o Delegado Fábio Silva. Conte um pouco sobre você e a minha equipe fala com você no WhatsApp.</p>
+    </div>
+    <img src="fabio.jpg" alt="Delegado Fábio Silva" width="150" height="250">
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="passos">
+    <div><b>1. Preencha</b>Leva uns 3 minutos.</div>
+    <div><b>2. Receba o contato</b>A equipe te chama no WhatsApp.</div>
+    <div><b>3. Comece</b>Entenda como a mentoria funciona.</div>
+  </div>
+
+  <form id="f" novalidate>
+    <div class="hp" aria-hidden="true"><label>Site <input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
+
+    <fieldset>
+      <legend>Seus dados</legend>
+      <div class="q" data-req><label for="nome">Nome completo <span class="req">*</span></label>
+        <input type="text" id="nome" name="nome" autocomplete="name" maxlength="100"><div class="erro">Escreva seu nome.</div></div>
+      <div class="q" data-req><label for="whatsapp">WhatsApp com DDD <span class="req">*</span></label>
+        <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(92) 99999-9999" maxlength="20"><div class="erro">Confira o número com DDD.</div></div>
+      <div class="q"><label for="email">E-mail</label>
+        <input type="email" id="email" name="email" autocomplete="email" maxlength="120"></div>
+      <div class="q" data-req><span class="lbl">Onde você mora? <span class="req">*</span></span>
+        <div class="duas2">
+          <input type="text" id="cidade" name="cidade" placeholder="Cidade" maxlength="80" autocomplete="address-level2">
+          <select id="uf" name="uf" aria-label="Estado"><option value="">UF</option></select>
+        </div><div class="erro">Informe cidade e estado.</div></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Formação</legend>
+      <div class="q" data-req data-radio="formacao_direito"><span class="lbl">Você é formado(a) em Direito? <span class="req">*</span></span>
+        <div class="ops">
+          <label class="op"><input type="radio" name="formacao_direito" value="formado"><span>Sim, sou formado(a)</span></label>
+          <label class="op"><input type="radio" name="formacao_direito" value="cursando"><span>Estou cursando Direito</span></label>
+          <label class="op"><input type="radio" name="formacao_direito" value="nao"><span>Não sou da área do Direito</span></label>
+        </div><div class="erro">Escolha uma opção.</div></div>
+      <div class="q hide" id="q-tempo" data-radio="tempo_formado"><span class="lbl">Há quanto tempo você é formado(a)? <span class="req">*</span></span>
+        <div class="ops duas">
+          <label class="op"><input type="radio" name="tempo_formado" value="menos de 1 ano"><span>Menos de 1 ano</span></label>
+          <label class="op"><input type="radio" name="tempo_formado" value="1 a 3 anos"><span>1 a 3 anos</span></label>
+          <label class="op"><input type="radio" name="tempo_formado" value="3 a 5 anos"><span>3 a 5 anos</span></label>
+          <label class="op"><input type="radio" name="tempo_formado" value="5 a 10 anos"><span>5 a 10 anos</span></label>
+          <label class="op"><input type="radio" name="tempo_formado" value="mais de 10 anos"><span>Mais de 10 anos</span></label>
+        </div><div class="erro">Escolha uma opção.</div></div>
+      <div class="q hide" id="q-oab" data-radio="oab"><span class="lbl">Tem inscrição na OAB?</span>
+        <div class="ops duas">
+          <label class="op"><input type="radio" name="oab" value="sim"><span>Sim</span></label>
+          <label class="op"><input type="radio" name="oab" value="nao"><span>Não</span></label>
+        </div></div>
+      <div class="q hide" id="q-periodo"><label for="periodo_cursando">Em que período você está? <span class="req">*</span></label>
+        <select id="periodo_cursando" name="periodo_cursando"><option value="">Escolha</option><option>1º ao 3º período</option><option>4º ao 6º período</option><option>7º ao 8º período</option><option>9º ou 10º período</option></select>
+        <div class="erro">Escolha o período.</div></div>
+      <div class="q" data-req><label for="profissao">Qual é a sua profissão hoje? <span class="req">*</span></label>
+        <small>Ex.: advogado(a), servidor(a) público(a), policial, estudante.</small>
+        <input type="text" id="profissao" name="profissao" maxlength="120"><div class="erro">Conte sua profissão.</div></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Sua preparação</legend>
+      <div class="q" data-req data-radio="ja_estudou_delegado"><span class="lbl">Você já estudou para concurso de Delegado? <span class="req">*</span></span>
+        <div class="ops">
+          <label class="op"><input type="radio" name="ja_estudou_delegado" value="ainda nao"><span>Ainda não, vou começar agora</span></label>
+          <label class="op"><input type="radio" name="ja_estudou_delegado" value="sim, por conta propria"><span>Sim, por conta própria</span></label>
+          <label class="op"><input type="radio" name="ja_estudou_delegado" value="sim, com cursinho ou mentoria"><span>Sim, com cursinho ou mentoria</span></label>
+          <label class="op"><input type="radio" name="ja_estudou_delegado" value="ja fiz prova de delegado"><span>Já fiz prova de Delegado</span></label>
+        </div><div class="erro">Escolha uma opção.</div></div>
+      <div class="q hide" id="q-provas"><label for="provas_feitas">Qual prova você fez e até que fase chegou?</label>
+        <input type="text" id="provas_feitas" name="provas_feitas" maxlength="400" placeholder="Ex.: PC-AM 2022, passei na objetiva"></div>
+      <div class="q" data-req><label for="por_que_delegado">Por que você quer ser Delegado(a) de Polícia? <span class="req">*</span></label>
+        <textarea id="por_que_delegado" name="por_que_delegado" maxlength="1500"></textarea><div class="erro">Conte o seu motivo.</div></div>
+      <div class="q" data-req data-radio="horas_dia"><span class="lbl">Quantas horas por dia você pretende estudar? <span class="req">*</span></span>
+        <div class="ops duas">
+          <label class="op"><input type="radio" name="horas_dia" value="ate 1h"><span>Até 1 hora</span></label>
+          <label class="op"><input type="radio" name="horas_dia" value="1 a 2h"><span>1 a 2 horas</span></label>
+          <label class="op"><input type="radio" name="horas_dia" value="2 a 4h"><span>2 a 4 horas</span></label>
+          <label class="op"><input type="radio" name="horas_dia" value="4 a 6h"><span>4 a 6 horas</span></label>
+          <label class="op"><input type="radio" name="horas_dia" value="mais de 6h"><span>Mais de 6 horas</span></label>
+        </div><div class="erro">Escolha uma opção.</div></div>
+      <div class="q"><label for="maior_dificuldade">Qual é a sua maior dificuldade hoje para estudar?</label>
+        <textarea id="maior_dificuldade" name="maior_dificuldade" maxlength="800" style="min-height:72px"></textarea></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Onde quer ser Delegado(a)</legend>
+      <div class="q" data-req><label for="estado_alvo">Em qual estado você pretende fazer o concurso de Delegado? <span class="req">*</span></label>
+        <select id="estado_alvo" name="estado_alvo"><option value="">Escolha</option><option>Qualquer estado com concurso aberto</option><option>Polícia Federal (Delegado Federal)</option></select>
+        <div class="erro">Escolha uma opção.</div></div>
+      <div class="q" data-req data-radio="viajar_outros_estados"><span class="lbl">Você viajaria para fazer prova de Delegado em outros estados? <span class="req">*</span></span>
+        <div class="ops">
+          <label class="op"><input type="radio" name="viajar_outros_estados" value="sim, para qualquer estado"><span>Sim, para qualquer estado</span></label>
+          <label class="op"><input type="radio" name="viajar_outros_estados" value="sim, so na minha regiao"><span>Sim, só na minha região</span></label>
+          <label class="op"><input type="radio" name="viajar_outros_estados" value="nao, so no meu estado"><span>Não, só no meu estado</span></label>
+        </div><div class="erro">Escolha uma opção.</div></div>
+      <div class="q" data-radio="mudar_de_estado"><span class="lbl">Se for aprovado(a) em outro estado, você se mudaria?</span>
+        <div class="ops duas">
+          <label class="op"><input type="radio" name="mudar_de_estado" value="sim"><span>Sim</span></label>
+          <label class="op"><input type="radio" name="mudar_de_estado" value="depende"><span>Depende</span></label>
+          <label class="op"><input type="radio" name="mudar_de_estado" value="nao"><span>Não</span></label>
+        </div></div>
+      <div class="q" data-radio="melhor_horario"><span class="lbl">Melhor horário para a equipe falar com você</span>
+        <div class="ops duas">
+          <label class="op"><input type="radio" name="melhor_horario" value="manha"><span>Manhã</span></label>
+          <label class="op"><input type="radio" name="melhor_horario" value="tarde"><span>Tarde</span></label>
+          <label class="op"><input type="radio" name="melhor_horario" value="noite"><span>Noite</span></label>
+          <label class="op"><input type="radio" name="melhor_horario" value="qualquer horario"><span>Qualquer horário</span></label>
+        </div></div>
+    </fieldset>
+
+    <label class="consent"><input type="checkbox" id="consent" checked> Autorizo a equipe do Delegado Fábio Silva a falar comigo pelo WhatsApp sobre a Mentoria Elite Delta.</label>
+    <button class="enviar" type="submit" id="btn">QUERO FALAR COM A EQUIPE</button>
+    <p class="msg-erro" id="msgErro">Não conseguimos enviar agora. Confira sua internet e tente de novo.</p>
+  </form>
+
+  <section class="ok" id="ok" aria-live="polite">
+    <div class="sel">✅</div>
+    <h2>Recebemos!</h2>
+    <p>Obrigado, <span id="okNome"></span>. A equipe do Delegado Fábio Silva vai falar com você no WhatsApp <b id="okTel"></b> em breve.</p>
+    <p>Enquanto isso, entre no grupo Preparação Delegado para não perder os avisos:</p>
+    <a class="btn" href="https://sndflw.com/i/4SXUAleyziaXLcjpITf4">Entrar no grupo Preparação Delegado</a>
+  </section>
+
+  <footer>Sou Concurseiro e Vou Passar · Delegado Fábio Silva</footer>
+</main>
+
+<script>
+(function(){
+  var API = "https://dqpxugdhlgafvddavzzp.supabase.co/functions/v1/elite-delta";
+  var UFS = ["AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO"];
+  var NOMES = {AC:"Acre",AL:"Alagoas",AM:"Amazonas",AP:"Amapá",BA:"Bahia",CE:"Ceará",DF:"Distrito Federal",ES:"Espírito Santo",GO:"Goiás",MA:"Maranhão",MG:"Minas Gerais",MS:"Mato Grosso do Sul",MT:"Mato Grosso",PA:"Pará",PB:"Paraíba",PE:"Pernambuco",PI:"Piauí",PR:"Paraná",RJ:"Rio de Janeiro",RN:"Rio Grande do Norte",RO:"Rondônia",RR:"Roraima",RS:"Rio Grande do Sul",SC:"Santa Catarina",SE:"Sergipe",SP:"São Paulo",TO:"Tocantins"};
+  var uf = document.getElementById("uf"), alvo = document.getElementById("estado_alvo");
+  UFS.forEach(function(u){
+    uf.add(new Option(u, u));
+    alvo.add(new Option("Polícia Civil · " + NOMES[u] + " (" + u + ")", "PC-" + u));
+  });
+  var f = document.getElementById("f");
+  function val(n){ var el = f.elements[n]; if(!el) return ""; if(el.length && !el.tagName){ for(var i=0;i<el.length;i++) if(el[i].checked) return el[i].value; return ""; } return (el.value||"").trim(); }
+  function mostra(id, on){ document.getElementById(id).classList.toggle("hide", !on); }
+  f.addEventListener("change", function(){
+    var fd = val("formacao_direito");
+    mostra("q-tempo", fd === "formado"); mostra("q-oab", fd === "formado"); mostra("q-periodo", fd === "cursando");
+    mostra("q-provas", val("ja_estudou_delegado") === "ja fiz prova de delegado");
+    f.querySelectorAll(".q.invalida").forEach(function(q){ if(ok(q)) q.classList.remove("invalida"); });
+  });
+  var tel = document.getElementById("whatsapp");
+  tel.addEventListener("input", function(){
+    var d = tel.value.replace(/\D/g,"").replace(/^55(?=\d{10,11}$)/,"").slice(0,11), o = d;
+    if(d.length > 2) o = "(" + d.slice(0,2) + ") " + d.slice(2);
+    if(d.length > 7) o = "(" + d.slice(0,2) + ") " + d.slice(2, d.length - 4) + "-" + d.slice(-4);
+    tel.value = o;
+  });
+  function ok(q){
+    if(q.classList.contains("hide")) return true;
+    if(q.id === "q-tempo") return !!val("tempo_formado");
+    if(q.id === "q-periodo") return !!val("periodo_cursando");
+    if(!q.hasAttribute("data-req")) return true;
+    if(q.dataset.radio) return !!val(q.dataset.radio);
+    if(q.querySelector("#whatsapp")){ var d = val("whatsapp").replace(/\D/g,""); return d.length === 10 || d.length === 11; }
+    if(q.querySelector("#cidade")) return !!val("cidade") && !!val("uf");
+    var el = q.querySelector("input,select,textarea"); return !!(el && el.value.trim());
+  }
+  var params = new URLSearchParams(location.search);
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    var primeira = null;
+    f.querySelectorAll(".q").forEach(function(q){ var bom = ok(q); q.classList.toggle("invalida", !bom); if(!bom && !primeira) primeira = q; });
+    if(primeira){ primeira.scrollIntoView({behavior:"smooth", block:"center"}); return; }
+    var body = {action:"inscrever", origin_url: location.href};
+    ["site","nome","whatsapp","email","cidade","uf","formacao_direito","tempo_formado","oab","periodo_cursando","profissao","ja_estudou_delegado","provas_feitas","por_que_delegado","horas_dia","maior_dificuldade","estado_alvo","viajar_outros_estados","mudar_de_estado","melhor_horario"].forEach(function(n){ var v = val(n); if(v) body[n] = v; });
+    var fd = body.formacao_direito; if(fd !== "formado"){ delete body.tempo_formado; delete body.oab; } if(fd !== "cursando") delete body.periodo_cursando;
+    ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].forEach(function(k){ var v = params.get(k); if(v) body[k] = v; });
+    body.consentimento = document.getElementById("consent").checked ? "sim" : "nao";
+    var btn = document.getElementById("btn"); btn.disabled = true; btn.textContent = "ENVIANDO…";
+    document.getElementById("msgErro").style.display = "none";
+    fetch(API, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(body)})
+      .then(function(r){ return r.json().then(function(j){ if(!r.ok || !j.ok) throw new Error(j.error || r.status); return j; }); })
+      .then(function(){
+        document.getElementById("okNome").textContent = body.nome.split(" ")[0];
+        document.getElementById("okTel").textContent = val("whatsapp");
+        f.style.display = "none"; document.querySelector(".passos").style.display = "none";
+        var okEl = document.getElementById("ok"); okEl.style.display = "block"; window.scrollTo({top:0, behavior:"smooth"});
+      })
+      .catch(function(){ btn.disabled = false; btn.textContent = "QUERO FALAR COM A EQUIPE"; document.getElementById("msgErro").style.display = "block"; });
+  });
+})();
+</script>
+</body>
+</html>
