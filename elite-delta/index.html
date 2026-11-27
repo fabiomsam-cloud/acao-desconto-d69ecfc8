@@ -121,7 +121,7 @@ footer{color:var(--mut);font-size:12px;text-align:center;margin-top:28px}
       <div class="q hide" id="q-oab" data-radio="oab"><span class="lbl">Tem inscrição na OAB?</span>
         <div class="ops duas">
           <label class="op"><input type="radio" name="oab" value="sim"><span>Sim</span></label>
-          <label class="op"><input type="radio" name="oab" value="nao"><span>Não</span></label>
+          <label class="op"><input type="radio" name="oab" value="não"><span>Não</span></label>
         </div></div>
       <div class="q hide" id="q-periodo"><label for="periodo_cursando">Em que período você está? <span class="req">*</span></label>
         <select id="periodo_cursando" name="periodo_cursando"><option value="">Escolha</option><option>1º ao 3º período</option><option>4º ao 6º período</option><option>7º ao 8º período</option><option>9º ou 10º período</option></select>
@@ -135,10 +135,10 @@ footer{color:var(--mut);font-size:12px;text-align:center;margin-top:28px}
       <legend>Sua preparação</legend>
       <div class="q" data-req data-radio="ja_estudou_delegado"><span class="lbl">Você já estudou para concurso de Delegado? <span class="req">*</span></span>
         <div class="ops">
-          <label class="op"><input type="radio" name="ja_estudou_delegado" value="ainda nao"><span>Ainda não, vou começar agora</span></label>
-          <label class="op"><input type="radio" name="ja_estudou_delegado" value="sim, por conta propria"><span>Sim, por conta própria</span></label>
+          <label class="op"><input type="radio" name="ja_estudou_delegado" value="ainda não"><span>Ainda não, vou começar agora</span></label>
+          <label class="op"><input type="radio" name="ja_estudou_delegado" value="sim, por conta própria"><span>Sim, por conta própria</span></label>
           <label class="op"><input type="radio" name="ja_estudou_delegado" value="sim, com cursinho ou mentoria"><span>Sim, com cursinho ou mentoria</span></label>
-          <label class="op"><input type="radio" name="ja_estudou_delegado" value="ja fiz prova de delegado"><span>Já fiz prova de Delegado</span></label>
+          <label class="op"><input type="radio" name="ja_estudou_delegado" value="já fiz prova de Delegado"><span>Já fiz prova de Delegado</span></label>
         </div><div class="erro">Escolha uma opção.</div></div>
       <div class="q hide" id="q-provas"><label for="provas_feitas">Qual prova você fez e até que fase chegou?</label>
         <input type="text" id="provas_feitas" name="provas_feitas" maxlength="400" placeholder="Ex.: PC-AM 2022, passei na objetiva"></div>
@@ -146,7 +146,7 @@ footer{color:var(--mut);font-size:12px;text-align:center;margin-top:28px}
         <textarea id="por_que_delegado" name="por_que_delegado" maxlength="1500"></textarea><div class="erro">Conte o seu motivo.</div></div>
       <div class="q" data-req data-radio="horas_dia"><span class="lbl">Quantas horas por dia você pretende estudar? <span class="req">*</span></span>
         <div class="ops duas">
-          <label class="op"><input type="radio" name="horas_dia" value="ate 1h"><span>Até 1 hora</span></label>
+          <label class="op"><input type="radio" name="horas_dia" value="até 1h"><span>Até 1 hora</span></label>
           <label class="op"><input type="radio" name="horas_dia" value="1 a 2h"><span>1 a 2 horas</span></label>
           <label class="op"><input type="radio" name="horas_dia" value="2 a 4h"><span>2 a 4 horas</span></label>
           <label class="op"><input type="radio" name="horas_dia" value="4 a 6h"><span>4 a 6 horas</span></label>
@@ -164,21 +164,21 @@ footer{color:var(--mut);font-size:12px;text-align:center;margin-top:28px}
       <div class="q" data-req data-radio="viajar_outros_estados"><span class="lbl">Você viajaria para fazer prova de Delegado em outros estados? <span class="req">*</span></span>
         <div class="ops">
           <label class="op"><input type="radio" name="viajar_outros_estados" value="sim, para qualquer estado"><span>Sim, para qualquer estado</span></label>
-          <label class="op"><input type="radio" name="viajar_outros_estados" value="sim, so na minha regiao"><span>Sim, só na minha região</span></label>
-          <label class="op"><input type="radio" name="viajar_outros_estados" value="nao, so no meu estado"><span>Não, só no meu estado</span></label>
+          <label class="op"><input type="radio" name="viajar_outros_estados" value="sim, só na minha região"><span>Sim, só na minha região</span></label>
+          <label class="op"><input type="radio" name="viajar_outros_estados" value="não, só no meu estado"><span>Não, só no meu estado</span></label>
         </div><div class="erro">Escolha uma opção.</div></div>
       <div class="q" data-radio="mudar_de_estado"><span class="lbl">Se for aprovado(a) em outro estado, você se mudaria?</span>
         <div class="ops duas">
           <label class="op"><input type="radio" name="mudar_de_estado" value="sim"><span>Sim</span></label>
           <label class="op"><input type="radio" name="mudar_de_estado" value="depende"><span>Depende</span></label>
-          <label class="op"><input type="radio" name="mudar_de_estado" value="nao"><span>Não</span></label>
+          <label class="op"><input type="radio" name="mudar_de_estado" value="não"><span>Não</span></label>
         </div></div>
       <div class="q" data-radio="melhor_horario"><span class="lbl">Melhor horário para a equipe falar com você</span>
         <div class="ops duas">
-          <label class="op"><input type="radio" name="melhor_horario" value="manha"><span>Manhã</span></label>
+          <label class="op"><input type="radio" name="melhor_horario" value="manhã"><span>Manhã</span></label>
           <label class="op"><input type="radio" name="melhor_horario" value="tarde"><span>Tarde</span></label>
           <label class="op"><input type="radio" name="melhor_horario" value="noite"><span>Noite</span></label>
-          <label class="op"><input type="radio" name="melhor_horario" value="qualquer horario"><span>Qualquer horário</span></label>
+          <label class="op"><input type="radio" name="melhor_horario" value="qualquer horário"><span>Qualquer horário</span></label>
         </div></div>
     </fieldset>
 
@@ -214,7 +214,7 @@ footer{color:var(--mut);font-size:12px;text-align:center;margin-top:28px}
   f.addEventListener("change", function(){
     var fd = val("formacao_direito");
     mostra("q-tempo", fd === "formado"); mostra("q-oab", fd === "formado"); mostra("q-periodo", fd === "cursando");
-    mostra("q-provas", val("ja_estudou_delegado") === "ja fiz prova de delegado");
+    mostra("q-provas", val("ja_estudou_delegado") === "já fiz prova de Delegado");
     f.querySelectorAll(".q.invalida").forEach(function(q){ if(ok(q)) q.classList.remove("invalida"); });
   });
   var tel = document.getElementById("whatsapp");
